@@ -4,6 +4,7 @@ import { faHardHat } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 import { PropTypes } from "prop-types";
 import SupportContact from './support-contact';
+import SalesOverview from './Sales-overview';
 
 const AccountOverviewWrapper = styled.div`
   display: flex;
@@ -13,12 +14,12 @@ const AccountOverviewWrapper = styled.div`
 `;
 
 export const AccountOverview = ({data}) => {
-  console.log(data);
 
   return (
     <AccountOverviewWrapper>
       <h2>Account Overview</h2>
       <SupportContact support={data.supportContact} />
+      <SalesOverview sales={data.salesOverview}/>
       </AccountOverviewWrapper>
   )
 }
