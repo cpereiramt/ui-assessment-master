@@ -23,11 +23,11 @@ const Stat = styled.div`
 const SalesOverview = ({ sales }) => (
   <SalesOverviewWrapper>
     <h2>Sales</h2>
-    <p>You had {sales.uploads} uploads and {sales.linesAdded} lines added.</p>
+    <p>You had {sales.uploads} uploads and {sales.linesAttempted} lines added.</p>
     <div>
       <Stat>
         <FontAwesomeIcon icon={faUpload} />
-        <span>{sales.uploadSuccess}% Upload Success</span>
+        <span>{sales.successfulUploads}% Upload Success</span>
       </Stat>
       <Stat>
         <FontAwesomeIcon icon={faCheckCircle} />
@@ -38,10 +38,11 @@ const SalesOverview = ({ sales }) => (
 );
 
 SalesOverview.propTypes = {
-  salesOverview: PropTypes.shape({
+    sales: PropTypes.shape({
+    lastUploadDate: PropTypes.number.isRequired,
     uploads: PropTypes.number.isRequired,
-    linesAdded: PropTypes.number.isRequired,
-    uploadSuccess: PropTypes.number.isRequired,
+    linesAttempted: PropTypes.number.isRequired,
+    successfulUploads: PropTypes.number.isRequired,
     linesSaved: PropTypes.number.isRequired,
   }).isRequired,
 };

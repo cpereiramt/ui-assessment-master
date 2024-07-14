@@ -14,7 +14,7 @@ const AccountOverviewWrapper = styled.div`
 `;
 
 export const AccountOverview = ({data}) => {
-
+  console.log(data);
   return (
     <AccountOverviewWrapper>
       <h2>Account Overview</h2>

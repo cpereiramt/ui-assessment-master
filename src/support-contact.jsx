@@ -19,7 +19,6 @@ const SupportContact = ({ support }) => (
       <div>
         <a href={`mailto:${support.email}`}>{support.email}</a>
       </div>
-      <div>{support.phone}</div>
     </ContactInfo>
   </SupportContactWrapper>
 );
@@ -27,8 +26,7 @@ const SupportContact = ({ support }) => (
 SupportContact.propTypes = {
   support: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired
   }).isRequired,
 };
 
