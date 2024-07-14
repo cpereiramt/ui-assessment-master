@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHardHat } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 import { PropTypes } from "prop-types";
+import SupportContact from './support-contact';
 
 const AccountOverviewWrapper = styled.div`
   display: flex;
@@ -16,14 +17,15 @@ export const AccountOverview = ({data}) => {
 
   return (
     <AccountOverviewWrapper>
-
+      <h2>Account Overview</h2>
+      <SupportContact support={data.supportContact} />
       </AccountOverviewWrapper>
   )
 }
 AccountOverview.propTypes = {
   data: PropTypes.shape({
-    support: PropTypes.object.isRequired,
-    sales: PropTypes.object.isRequired,
+    supportContact: PropTypes.object.isRequired,
+    salesOverview: PropTypes.object.isRequired,
   }).isRequired,
 };
 
