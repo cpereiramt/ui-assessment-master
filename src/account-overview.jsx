@@ -12,12 +12,11 @@ const AccountOverviewWrapper = styled.div`
   align-items: center;
   padding: 20px;
 `;
-
 export const AccountOverview = ({data}) => {
   console.log(data);
   return (
     <AccountOverviewWrapper>
-      <h2>Account Overview</h2>
+      <h1>Account Overview</h1>
       <SupportContact support={data.supportContact} />
       <SalesOverview sales={data.salesOverview}/>
       </AccountOverviewWrapper>

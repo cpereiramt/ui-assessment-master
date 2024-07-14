@@ -8,7 +8,6 @@ const SalesOverviewWrapper = styled.div`
   text-align: center;
   margin: 20px 0;
 `;
-
 const Stat = styled.div`
   display: flex;
   align-items: center;
