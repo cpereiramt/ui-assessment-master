@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const SupportContactWrapper = styled.div`
   display: flex;
@@ -63,6 +65,11 @@ font-weight: 600;
 color: #878484;
 `;
 
+const EnvelopeIcon = styled.span`
+margin-right: 10px ;
+color: #878484;
+`;
+
 const SupportContact = ({ support }) => (
   <SupportContactWrapper>
     <Header>Your Feefo Support Contact</Header>       
@@ -71,6 +78,7 @@ const SupportContact = ({ support }) => (
       <SupportText>
         <SupportName>{support.name}</SupportName>
         <SupportEmailPhone>
+          <EnvelopeIcon> <FontAwesomeIcon icon={faEnvelope} /></EnvelopeIcon>
         <SupportEmail href={`mailto:${support.email}`}>{support.email}</SupportEmail>
           <SupportPhone>{support.phone}</SupportPhone>
           </SupportEmailPhone>
