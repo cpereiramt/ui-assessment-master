@@ -6,7 +6,15 @@ import styled from 'styled-components';
 
 const SalesOverviewWrapper = styled.div`
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0;   
+  background-color: #ffffff;
+  width: 70%;
+  height: 240px;
+  max-width:600px;
+  -webkit-box-shadow: 0px 0px 4px 1px #f4f4f4; 
+  box-shadow: 0px 0px 4px 1px #f4f4f4;
+  border-radius: 9px;
+  
 `;
 const Stat = styled.div`
   display: flex;
