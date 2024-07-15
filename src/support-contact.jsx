@@ -34,7 +34,6 @@ const SupportIcon = styled.div`
 const ContactInfo = styled.div`
  display: flex;
   align-items: center;
-  margin-right:
 `;
 
 const SupportText = styled.span`
