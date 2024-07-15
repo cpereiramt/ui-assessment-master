@@ -1,8 +1,6 @@
-# Feefo: UI Technical Assessment
+# UI Technical Assessment
 
 Implement the design provided in `design.png` as a set of React components.
-
-![account overview design](./design.png?raw=true)
 
 There is a stub for the data structure in `app.js`. Please use this to drive the view content and derive any calculated data from this in your components. The container component has also been created `AccountOverview` `./src/account-overview.jsx`.
 
