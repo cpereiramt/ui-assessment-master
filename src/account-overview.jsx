@@ -1,10 +1,8 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHardHat } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 import { PropTypes } from "prop-types";
 import SupportContact from './support-contact';
-import SalesOverview from './Sales-overview';
+import SalesOverview from './sales-overview';
 import { breakpoints } from './styles/breakpoints';
 
 
