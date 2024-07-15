@@ -47,7 +47,7 @@ const SalesTitle = styled.h2`
 `;
 const SalesParagraph = styled.p`
 color: #999;
-font-weight: 600;
+font-weight: 200;
 font-size: 15px ;
 `;
 
@@ -88,6 +88,11 @@ padding-top: 18px ;
 padding-right: 15px;
 font-size: 19px ;
 `;
+
+const BoldText = styled.span`
+font-weight: bold ;
+color: #4a4a4a;
+`;
 const SalesOverview = ({ sales }) => (
   <SalesOverviewWrapper>
     <SalesHeaderDiv>
@@ -99,7 +104,7 @@ const SalesOverview = ({ sales }) => (
             </InfoIcon>
         </SalesAttentioIconContainer>
     </SalesHeaderFirstLine>
-    <SalesParagraph><span>You had </span> <span>{sales.uploads} uploads</span> and <span>{sales.linesAttempted}</span> lines added.</SalesParagraph>
+    <SalesParagraph>You had <BoldText>{sales.uploads} uploads</BoldText> and <BoldText>{sales.linesAttempted}</BoldText> lines added.</SalesParagraph>
     </SalesHeaderDiv>
     <StatDiv>
       <Stat>
