@@ -54,7 +54,7 @@ const SupportEmailPhone = styled.div`
   color: #666;
 `;
 const SupportEmail = styled.span`
-    margin-right: 48px;
+    margin-right: 15px;
 
 `;
 
