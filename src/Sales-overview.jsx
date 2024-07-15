@@ -29,24 +29,22 @@ const Stat = styled.div`
   border-top: 2px solid #f4f4f4 ;
   flex-grow: 1;
   padding: 30px ;
-   &:first-child {
-    border-right: 2px solid #f4f4f4;
-    height: 100%;
-    
- 
-  }
-    & span {
-      white-space: nowrap;
-  }
      @media (min-width: ${breakpoints.tablet}) {
     }
     @media (min-width: ${breakpoints.desktop}) {
       display: flex;
       align-items: flex-start ;
       border-top: 2px solid #f4f4f4 ;
-      flex-grow: 1;
       padding: 30px ;
     }
+   &:first-child {
+    border-right: 2px solid #f4f4f4;   
+ 
+  }
+    & span {
+      white-space: nowrap;
+  }
+  
 `;
 
 const StatDiv = styled.div`
@@ -54,6 +52,7 @@ const StatDiv = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column ;
+    align-items: center ;
 
    @media (min-width: ${breakpoints.tablet}) {
     }
@@ -71,10 +70,13 @@ const SalesHeaderDiv = styled.div`
  padding-left: 25px ;
     @media (min-width: ${breakpoints.tablet}) {
     }
-    @media (min-width: ${breakpoints.desktop}) {}
+    @media (min-width: ${breakpoints.desktop}) {
+       align-items: center ;
+
+    }
 `;
 
-const SalesTitle = styled.h2`
+const SalesTitle = styled.h2`   
    @media (min-width: ${breakpoints.tablet}) {
     }
     @media (min-width: ${breakpoints.desktop}) {}
@@ -83,9 +85,15 @@ const SalesParagraph = styled.p`
 color: #999;
 font-weight: 200;
 font-size: 15px ;
+width: 100%;
+text-align: center;
+justify-content: center ;
    @media (min-width: ${breakpoints.tablet}) {
     }
-    @media (min-width: ${breakpoints.desktop}) {}
+    @media (min-width: ${breakpoints.desktop}) {
+      width: 100%; 
+      text-align: left;
+    }
 `;
 
 const PercentageValue = styled.span`
@@ -134,9 +142,12 @@ const SalesHeaderFirstLine = styled.div`
 display: flex;
 justify-content: space-between ;
 width: 100% ;
+justify-content: center ;
    @media (min-width: ${breakpoints.tablet}) {
     }
-    @media (min-width: ${breakpoints.desktop}) {}
+    @media (min-width: ${breakpoints.desktop}) {
+      justify-content: flex-start ;
+    }
 `;
 const SalesAttentioIconContainer = styled.div`
 padding-top: 18px ;
