@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { breakpoints } from './styles/breakpoints';
 
-const SupportContactWrapper = styled.div`
+const SupportContactWrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -20,7 +20,7 @@ const SupportContactWrapper = styled.div`
 `;
 
 
-const Header = styled.div`
+const Header = styled.header`
    font-size: 14px;
   font-weight: bold;
   color: #999;
@@ -30,7 +30,7 @@ const Header = styled.div`
     }
     @media (min-width: ${breakpoints.desktop}) {}
 `;
-const SupportIcon = styled.div`
+const SupportIcon = styled.figure`
     display:none;
      @media (min-width: ${breakpoints.tablet}) {
     }
@@ -50,7 +50,7 @@ const SupportIcon = styled.div`
       border-radius: 9px;
     }
 `;
-const ContactInfo = styled.div`
+const ContactInfo = styled.section`
  display: flex;
   align-items: center;
      @media (min-width: ${breakpoints.tablet}) {
@@ -58,7 +58,7 @@ const ContactInfo = styled.div`
     @media (min-width: ${breakpoints.desktop}) {}
 `;
 
-const SupportText = styled.span`
+const SupportText = styled.article`
   display: flex;
   flex-direction: column;
      @media (min-width: ${breakpoints.tablet}) {
@@ -77,7 +77,7 @@ const SupportName = styled.span`
       text-align: left;
     }
  `;
-const SupportEmailPhone = styled.div`
+const SupportEmailPhone = styled.article`
   display: flex;
   flex-direction: column;
   font-size: 16px;
@@ -107,7 +107,7 @@ color: #878484;
     @media (min-width: ${breakpoints.desktop}) {}
 `;
 
-const EnvelopeIcon = styled.span`
+const EnvelopeIcon = styled.figure`
 margin-right: 10px ;
 color: #878484;
 display: none;
