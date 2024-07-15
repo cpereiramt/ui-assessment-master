@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUpload, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faUpload, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
 const SalesOverviewWrapper = styled.div`
   background-color: #ffffff;
   width: 70%;
   height: 240px;
-  max-width:600px;
+  max-width:800px;
   -webkit-box-shadow: 0px 0px 4px 1px #f4f4f4; 
   box-shadow: 0px 0px 4px 1px #f4f4f4;
-  border-radius: 9px;  
+  border-radius: 9px;
 `;
 const Stat = styled.div`
   display: flex;
@@ -32,21 +32,23 @@ const Stat = styled.div`
 
 const StatDiv = styled.div`
 display: flex;
-height:100% ;
+height:80%;
 `;
 
 const SalesHeaderDiv = styled.div`
  display:flex;
  flex-direction:column;
  align-items: flex-start;
- padding-left: 10px ;
+ padding-left: 25px ;
 `;
 
 const SalesTitle = styled.h2`
 
 `;
 const SalesParagraph = styled.p`
-
+color: #999;
+font-weight: 600;
+font-size: 15px ;
 `;
 
 const PercentageValue = styled.span`
@@ -65,12 +67,39 @@ const LinesSavedText = styled.span`
 color: #999;
 text-transform: uppercase;
 font-weight: bold ;
+font-family: 'Roboto' ;
+`;
+const UploadIcon = styled.span`
+color: #3eb0ea;
+font-size: 22px;
+margin-right: 5px ;
+`;
+
+const InfoIcon = styled.span`
+color: #d0cece;
+`;
+const SalesHeaderFirstLine = styled.div`
+display: flex;
+justify-content: space-between ;
+width: 100% ;
+`;
+const SalesAttentioIconContainer = styled.div`
+padding-top: 18px ;
+padding-right: 15px;
+font-size: 19px ;
 `;
 const SalesOverview = ({ sales }) => (
   <SalesOverviewWrapper>
     <SalesHeaderDiv>
-    <SalesTitle>Sales</SalesTitle>
-    <SalesParagraph>You had {sales.uploads} uploads and {sales.linesAttempted} lines added.</SalesParagraph>
+      <SalesHeaderFirstLine>
+    <SalesTitle><UploadIcon><FontAwesomeIcon icon={faUpload} /> </UploadIcon>Sales</SalesTitle>
+        <SalesAttentioIconContainer>
+          <InfoIcon>
+            <FontAwesomeIcon icon={faInfoCircle} />
+            </InfoIcon>
+        </SalesAttentioIconContainer>
+    </SalesHeaderFirstLine>
+    <SalesParagraph><span>You had </span> <span>{sales.uploads} uploads</span> and <span>{sales.linesAttempted}</span> lines added.</SalesParagraph>
     </SalesHeaderDiv>
     <StatDiv>
       <Stat>
@@ -79,8 +108,7 @@ const SalesOverview = ({ sales }) => (
       <Stat>
         <PercentageValue>{sales.linesSaved}%</PercentageValue><LinesSavedText> Lines Saved</LinesSavedText>
       </Stat>
-      </StatDiv>
-  
+      </StatDiv>  
   </SalesOverviewWrapper>
 );
 

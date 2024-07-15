@@ -10,13 +10,14 @@ const AccountOverviewWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
 `;
 
 const HeaderDiv = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content:space-between;
+  margin-bottom: 30px ;
 `;
 
 const GeneralDiv = styled.div`
@@ -27,11 +28,11 @@ width: 100%;
 margin: auto;
 `;
 const Title = styled.h2`
-font-size: 24px; 
+font-size: 32px; 
   font-weight: normal;  
   color: #666;  
   margin: 0;
-  margin-right: 80px;
+  margin-right: 180px;
 `;
 export const AccountOverview = ({data}) => {
   console.log(data);

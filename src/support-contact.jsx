@@ -54,10 +54,14 @@ const SupportEmailPhone = styled.div`
 `;
 const SupportEmail = styled.span`
     margin-right: 15px;
-
+    font-weight: 600;
+    color: #878484 ;
 `;
 
-const SupportPhone = styled.span``;
+const SupportPhone = styled.span`
+font-weight: 600;
+color: #878484;
+`;
 
 const SupportContact = ({ support }) => (
   <SupportContactWrapper>
