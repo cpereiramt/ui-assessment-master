@@ -25,10 +25,12 @@ const SalesOverviewWrapper = styled.div`
 const Stat = styled.div`
   display: flex;
   flex-direction: column ;
-  align-items: flex-start ;
+  align-items: center ;
+  justify-content:center ;
   border-top: 2px solid #f4f4f4 ;
   flex-grow: 1;
   padding: 30px ;
+  width: 77vw;
      @media (min-width: ${breakpoints.tablet}) {
     }
     @media (min-width: ${breakpoints.desktop}) {
@@ -36,11 +38,10 @@ const Stat = styled.div`
       align-items: flex-start ;
       border-top: 2px solid #f4f4f4 ;
       padding: 30px ;
-    }
-   &:first-child {
+       &:first-child {
     border-right: 2px solid #f4f4f4;   
- 
-  }
+   }
+    }
     & span {
       white-space: nowrap;
   }
@@ -49,11 +50,10 @@ const Stat = styled.div`
 
 const StatDiv = styled.div`
    width: 100%;
-    height: 100vh;
+    height: 40vh;
     display: flex;
     flex-direction: column ;
-    align-items: center ;
-
+    justify-content: center;
    @media (min-width: ${breakpoints.tablet}) {
     }
     @media (min-width: ${breakpoints.desktop}) {
@@ -76,10 +76,13 @@ const SalesHeaderDiv = styled.div`
     }
 `;
 
-const SalesTitle = styled.h2`   
+const SalesTitle = styled.h2` 
+   font-size: 40px;
    @media (min-width: ${breakpoints.tablet}) {
     }
-    @media (min-width: ${breakpoints.desktop}) {}
+    @media (min-width: ${breakpoints.desktop}) {
+      font-size: 25px;
+    }
 `;
 const SalesParagraph = styled.p`
 color: #999;
@@ -88,11 +91,13 @@ font-size: 15px ;
 width: 100%;
 text-align: center;
 justify-content: center ;
+margin-bottom: 48px;
    @media (min-width: ${breakpoints.tablet}) {
     }
     @media (min-width: ${breakpoints.desktop}) {
       width: 100%; 
       text-align: left;
+      margin-bottom: 15px;
     }
 `;
 
@@ -100,6 +105,7 @@ const PercentageValue = styled.span`
 color: #21aa55;
 font-weight: bold;
 font-size: 40px ;
+
    @media (min-width: ${breakpoints.tablet}) {
     }
     @media (min-width: ${breakpoints.desktop}) {}
@@ -124,29 +130,35 @@ font-family: 'Roboto' ;
     @media (min-width: ${breakpoints.desktop}) {}
 `;
 const UploadIcon = styled.span`
-color: #3eb0ea;
-font-size: 22px;
-margin-right: 5px ;
+   display: none;
    @media (min-width: ${breakpoints.tablet}) {
     }
-    @media (min-width: ${breakpoints.desktop}) {}
+    @media (min-width: ${breakpoints.desktop}) {
+      display: inline ;
+      color: #3eb0ea;
+      font-size: 22px;
+      margin-right: 5px ;
+    }
 `;
 
 const InfoIcon = styled.span`
-color: #d0cece;
+display: none;
+
    @media (min-width: ${breakpoints.tablet}) {
     }
-    @media (min-width: ${breakpoints.desktop}) {}
+    @media (min-width: ${breakpoints.desktop}) {
+      display: block ;
+      color: #d0cece;
+    }
 `;
 const SalesHeaderFirstLine = styled.div`
 display: flex;
-justify-content: space-between ;
 width: 100% ;
 justify-content: center ;
    @media (min-width: ${breakpoints.tablet}) {
     }
     @media (min-width: ${breakpoints.desktop}) {
-      justify-content: flex-start ;
+      justify-content: space-between ;
     }
 `;
 const SalesAttentioIconContainer = styled.div`

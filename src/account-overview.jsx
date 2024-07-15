@@ -26,7 +26,7 @@ const AccountOverviewWrapper = styled.div`
 
 const HeaderDiv = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 30vh;
     display: flex;
     flex-direction: column ;
     @media (min-width: ${breakpoints.tablet}) {
@@ -44,7 +44,7 @@ const HeaderDiv = styled.div`
 
 
 const Title = styled.h2`
-  font-size: 25px; 
+  font-size: 35px; 
   font-weight: normal;  
   color: #666;  
   margin-bottom: 15px;
@@ -55,6 +55,7 @@ const Title = styled.h2`
     @media (min-width: ${breakpoints.desktop}) {
       white-space: nowrap;
       margin-right: 100px;
+      font-size: 30px; 
     }
 `;
 export const AccountOverview = ({data}) => {

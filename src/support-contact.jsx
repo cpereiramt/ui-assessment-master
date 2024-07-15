@@ -31,22 +31,24 @@ const Header = styled.div`
     @media (min-width: ${breakpoints.desktop}) {}
 `;
 const SupportIcon = styled.div`
-  width: 40px;
-  height: 42px;
-  background-color: #ffcc00;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-weight: bold;
-  color: BLACK;
-  margin-right: 10px;
-  box-shadow: 0px 0px 2px 0px #f9cf03;
-  border-radius: 9px;
+    display:none;
      @media (min-width: ${breakpoints.tablet}) {
     }
-    @media (min-width: ${breakpoints.desktop}) {}
+    @media (min-width: ${breakpoints.desktop}) {
+      width: 40px;
+      height: 42px;
+      background-color: #ffcc00;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: bold;
+      color: BLACK;
+      margin-right: 10px;
+      box-shadow: 0px 0px 2px 0px #f9cf03;
+      border-radius: 9px;
+    }
 `;
 const ContactInfo = styled.div`
  display: flex;
@@ -65,21 +67,28 @@ const SupportText = styled.span`
 `;
 
 const SupportName = styled.span`
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
- text-align: left;
+ 
     @media (min-width: ${breakpoints.tablet}) {
     }
-    @media (min-width: ${breakpoints.desktop}) {}
+    @media (min-width: ${breakpoints.desktop}) {
+      font-size: 16px;
+      text-align: left;
+    }
  `;
 const SupportEmailPhone = styled.div`
   display: flex;
-  flex-direction: row;
-  font-size: 14px;
+  flex-direction: column;
+  font-size: 16px;
   color: #666;
      @media (min-width: ${breakpoints.tablet}) {
     }
-    @media (min-width: ${breakpoints.desktop}) {}
+    @media (min-width: ${breakpoints.desktop}) {
+      display: flex;
+      flex-direction: row;
+      font-size: 14px;
+    }
 `;
 const SupportEmail = styled.span`
     margin-right: 15px;
@@ -101,9 +110,12 @@ color: #878484;
 const EnvelopeIcon = styled.span`
 margin-right: 10px ;
 color: #878484;
+display: none;
    @media (min-width: ${breakpoints.tablet}) {
     }
-    @media (min-width: ${breakpoints.desktop}) {}
+    @media (min-width: ${breakpoints.desktop}) {
+      display: block;
+    }
 `;
 
 const SupportContact = ({ support }) => (
