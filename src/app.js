@@ -1,13 +1,22 @@
 import './app.css';
 import AccountOverview from './account-overview';
 import styled from "styled-components";
+import { breakpoints } from "./styles/breakpoints";
 
 function App() {
 
   const RootDiv = styled.div`
     width: 100%;
-    height: 800px;
-    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    @media (min-width: ${breakpoints.tablet}) {
+      width: 100vw;
+      height: 100vh;
+      background-color: #f4f4f4;
+      display: block;
+    }
+    @media (min-width: ${breakpoints.desktop}) {
+    }
   `;
   const accountOverviewStub = {
     supportContact: {

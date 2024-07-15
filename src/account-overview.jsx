@@ -5,39 +5,62 @@ import styled from 'styled-components';
 import { PropTypes } from "prop-types";
 import SupportContact from './support-contact';
 import SalesOverview from './Sales-overview';
+import { breakpoints } from './styles/breakpoints';
+
 
 const AccountOverviewWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px;
+   width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column ;
+  @media (min-width: ${breakpoints.tablet}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+   @media (min-width: ${breakpoints.desktop}) {}
 `;
 
 const HeaderDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content:space-between;
-  margin-bottom: 30px ;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column ;
+    @media (min-width: ${breakpoints.tablet}) {
+       width: 540px;
+        height: 10% ;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        margin-bottom: 50px;
+    }
+    @media (min-width: ${breakpoints.desktop}) {
+      width: 800px;
+    }
 `;
 
-const GeneralDiv = styled.div`
-display: flex;
-flex-direction: column;
-background-color: #f4f4f4;
-width: 100%;
-margin: auto;
-`;
+
 const Title = styled.h2`
-font-size: 32px; 
+  font-size: 35px; 
   font-weight: normal;  
   color: #666;  
-  margin: 0;
-  margin-right: 180px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+    @media (min-width: ${breakpoints.tablet}) {
+      white-space: nowrap;
+      margin-right: 100px;
+      font-size: 25px; 
+    }
+    @media (min-width: ${breakpoints.desktop}) {
+      font-size: 30px; 
+    }
 `;
 export const AccountOverview = ({data}) => {
   console.log(data);
   return (
-    <GeneralDiv>
+    
     <AccountOverviewWrapper>
       <HeaderDiv>
       <Title>Account Overview</Title>
@@ -45,7 +68,7 @@ export const AccountOverview = ({data}) => {
         </HeaderDiv>        
         <SalesOverview sales={data.salesOverview} />
       </AccountOverviewWrapper>  
-      </GeneralDiv>
+     
   )
 }
 AccountOverview.propTypes = {
