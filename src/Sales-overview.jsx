@@ -5,7 +5,7 @@ import { faUpload, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 import { breakpoints } from './styles/breakpoints';
 
-const SalesOverviewWrapper = styled.div`
+const SalesOverviewWrapper = styled.main`
     width: 100%;
     height: 100vh;
     display: flex;
@@ -23,7 +23,7 @@ const SalesOverviewWrapper = styled.div`
        
     }
 `;
-const Stat = styled.div`
+const Stat = styled.article`
   display: flex;
   flex-direction: column ;
   align-items: center ;
@@ -54,7 +54,7 @@ const Stat = styled.div`
   
 `;
 
-const StatDiv = styled.div`
+const StatDiv = styled.section`
    width: 100%;
     height: 40vh;
     display: flex;
@@ -70,7 +70,7 @@ const StatDiv = styled.div`
     }
 `;
 
-const SalesHeaderDiv = styled.div`
+const SalesHeaderDiv = styled.header`
  display:flex;
  flex-direction:column;
  align-items: flex-start;
@@ -139,7 +139,7 @@ font-family: 'Roboto' ;
     }
     @media (min-width: ${breakpoints.desktop}) {}
 `;
-const UploadIcon = styled.span`
+const UploadIcon = styled.figure`
    display: none;
    @media (min-width: ${breakpoints.tablet}) {
    display: inline ;
@@ -150,7 +150,7 @@ const UploadIcon = styled.span`
     @media (min-width: ${breakpoints.desktop}) {}
 `;
 
-const InfoIcon = styled.span`
+const InfoIcon = styled.figure`
 display: none;
 
    @media (min-width: ${breakpoints.tablet}) {

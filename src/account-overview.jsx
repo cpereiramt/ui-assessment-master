@@ -6,7 +6,7 @@ import SalesOverview from './sales-overview';
 import { breakpoints } from './styles/breakpoints';
 
 
-const AccountOverviewWrapper = styled.div`
+const AccountOverviewWrapper = styled.main`
    width: 100%;
     height: 100vh;
     display: flex;
@@ -20,7 +20,7 @@ const AccountOverviewWrapper = styled.div`
    @media (min-width: ${breakpoints.desktop}) {}
 `;
 
-const HeaderDiv = styled.div`
+const HeaderDiv = styled.header`
     width: 100%;
     height: 30vh;
     display: flex;
