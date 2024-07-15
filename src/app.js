@@ -7,15 +7,15 @@ function App() {
 
   const RootDiv = styled.div`
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     @media (min-width: ${breakpoints.tablet}) {
-    }
-    @media (min-width: ${breakpoints.desktop}) {
       width: 100vw;
-      height: 800px;
+      height: 100vh;
       background-color: #f4f4f4;
       display: block;
+    }
+    @media (min-width: ${breakpoints.desktop}) {
     }
   `;
   const accountOverviewStub = {

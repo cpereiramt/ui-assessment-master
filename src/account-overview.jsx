@@ -14,14 +14,12 @@ const AccountOverviewWrapper = styled.div`
     display: flex;
     flex-direction: column ;
   @media (min-width: ${breakpoints.tablet}) {
-
-  }
-   @media (min-width: ${breakpoints.desktop}) {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px;
   }
+   @media (min-width: ${breakpoints.desktop}) {}
 `;
 
 const HeaderDiv = styled.div`
@@ -30,15 +28,15 @@ const HeaderDiv = styled.div`
     display: flex;
     flex-direction: column ;
     @media (min-width: ${breakpoints.tablet}) {
-    }
-    @media (min-width: ${breakpoints.desktop}) {
-        width: 800px;
+       width: 540px;
         height: 10% ;
         display: flex;
         flex-direction: row;
         justify-content:space-between;
         margin-bottom: 50px;
-         ;
+    }
+    @media (min-width: ${breakpoints.desktop}) {
+      width: 800px;
     }
 `;
 
@@ -51,10 +49,11 @@ const Title = styled.h2`
   display: flex;
   justify-content: center;
     @media (min-width: ${breakpoints.tablet}) {
-    }
-    @media (min-width: ${breakpoints.desktop}) {
       white-space: nowrap;
       margin-right: 100px;
+      font-size: 25px; 
+    }
+    @media (min-width: ${breakpoints.desktop}) {
       font-size: 30px; 
     }
 `;
