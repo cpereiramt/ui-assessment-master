@@ -61,10 +61,10 @@ export const AccountOverview = ({data}) => {
     
     <AccountOverviewWrapper>
       <HeaderDiv>
-      <Title>Account Overview</Title>
-        <SupportContact support={data.supportContact} />
+      <Title aria-label="Page title">Account Overview</Title>
+        <SupportContact support={data.supportContact} aria-label="Support Contact Section"/>
         </HeaderDiv>        
-        <SalesOverview sales={data.salesOverview} />
+        <SalesOverview sales={data.salesOverview} aria-label="Sales Overview Section" />
       </AccountOverviewWrapper>  
      
   )
