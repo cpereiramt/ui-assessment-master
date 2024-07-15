@@ -10,17 +10,42 @@ const AccountOverviewWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
 `;
 
-export const AccountOverview = ({data}) => {
+const HeaderDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin-bottom: 30px ;
+`;
 
+const GeneralDiv = styled.div`
+display: flex;
+flex-direction: column;
+background-color: #f4f4f4;
+width: 100%;
+margin: auto;
+`;
+const Title = styled.h2`
+font-size: 32px; 
+  font-weight: normal;  
+  color: #666;  
+  margin: 0;
+  margin-right: 180px;
+`;
+export const AccountOverview = ({data}) => {
+  console.log(data);
   return (
+    <GeneralDiv>
     <AccountOverviewWrapper>
-      <h2>Account Overview</h2>
-      <SupportContact support={data.supportContact} />
-      <SalesOverview sales={data.salesOverview}/>
-      </AccountOverviewWrapper>
+      <HeaderDiv>
+      <Title>Account Overview</Title>
+        <SupportContact support={data.supportContact} />
+        </HeaderDiv>        
+        <SalesOverview sales={data.salesOverview} />
+      </AccountOverviewWrapper>  
+      </GeneralDiv>
   )
 }
 AccountOverview.propTypes = {
